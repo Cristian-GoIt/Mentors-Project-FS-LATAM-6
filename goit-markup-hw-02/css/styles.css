@@ -37,6 +37,10 @@ body {
   color: var(--primary-white-color);
   text-transform: capitalize;
 }
+.button-primary:hover{
+  background-color: var(--button-primary-hover) ;
+
+}
 
 /* Header section  */
 .logo {
