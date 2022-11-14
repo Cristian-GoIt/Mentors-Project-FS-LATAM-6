@@ -127,6 +127,6 @@ address .contact {
   text-decoration: none;
 }
 
-address .contact{
+address .contact:hover{
   color: var(--primary-white-color);
 }
