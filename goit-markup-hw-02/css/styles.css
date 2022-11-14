@@ -123,3 +123,7 @@ address .contact {
   line-height: 1.71;
   text-decoration: none;
 }
+
+address .contact{
+  color: var(--primary-white-color);
+}
