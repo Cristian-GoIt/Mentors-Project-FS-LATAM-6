@@ -28,6 +28,12 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+a {
+  text-decoration: none;
+}
+section {
+  padding: 94px 0;
+}
 
 .button-primary {
   background-color: var(--accent-color);
@@ -48,7 +54,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .logo {
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
@@ -63,9 +68,6 @@ body {
 .logo-white {
   color: var(--primary-white-color);
 }
-.section {
-  padding: 94px 0;
-}
 .section > h2 {
   color: var(--primary-black-color);
   font-size: 32px;
@@ -73,29 +75,28 @@ body {
   padding: 30px 0;
   text-align: center;
 }
-
 .no-top-pading {
   padding-top: 0;
 }
-a{
-  text-decoration: none;
-}
+
 /* ----------- Header section ----------- */
 header {
+  height: 80px;
+}
+
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  height: 80px;
-  padding: 0 var(--container-padding);
+  height: 100%;
 }
-header nav {
+header .container nav {
   display: flex;
   align-items: center;
   gap: 100px;
 }
-
-header nav .logo {
+header .container nav .logo {
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
   font-size: 26px;
@@ -103,14 +104,12 @@ header nav .logo {
   line-height: 1.2;
   text-decoration: none;
 }
-
-header nav .nav-menu {
+header .container nav .nav-menu {
   display: flex;
   list-style: none;
   gap: 80px;
 }
-
-header nav .nav-menu .page {
+header .container nav .nav-menu .page {
   color: var(--primary-black-color);
   font-weight: 500;
   font-size: 14px;
@@ -121,12 +120,12 @@ header nav .nav-menu .page {
   text-transform: capitalize;
 }
 
-.contacts-menu {
+header .container .contacts-menu {
   display: flex;
   list-style: none;
   gap: 80px;
 }
-.contacts-menu .item {
+header .container .contacts-menu .item {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -134,11 +133,12 @@ header nav .nav-menu .page {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.nav-menu .page:hover,
-.nav-menu .page:focus,
-.nav-menu .page.current,
-.contacts-menu .item:hover,
-.contacts-menu .item:focus {
+
+header .container nav .nav-menu .page:hover,
+header .container nav .nav-menu .page:focus,
+header .container nav .nav-menu .page.current,
+header .container .contacts-menu .item:hover,
+header .container .contacts-menu .item:focus {
   color: var(--accent-color);
 }
 /* ----------- Hero section ----------- */
@@ -155,52 +155,66 @@ header nav .nav-menu .page {
   text-transform: capitalize;
 }
 /* ----------- Benefits section ----------- */
-.benefits {
+.benefits .container .benefits-list {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-evenly;
   display: flex;
 }
-.benefits li {
+.benefits .container .benefits-list li {
   list-style: none;
   width: 240px;
 }
-.benefits li .title {
+.benefits .container .benefits-list li .title {
   height: 50px;
   text-transform: uppercase;
   color: var(--primary-black-color);
 }
 /* ----------- What we do----------- */
-.what-we-do-section .container ul {
+.what-we-do .container h2 {
+  color: var(--primary-black-color);
+  font-size: 32px;
+  font-weight: 700px;
+  padding: 30px 0;
+  text-align: center;
+}
+.what-we-do .container ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.what-we-do-section .container ul li {
+.what-we-do .container ul li {
   list-style: none;
   width: 360px;
 }
-/*----------- Team section -----------*/
+/*----------- OurTeam section -----------*/
 .team-section {
   background-color: var(--background-gray);
 }
-.team {
+.team-section .container h2 {
+  color: var(--primary-black-color);
+  font-size: 32px;
+  font-weight: 700px;
+  padding: 30px 0;
+  text-align: center;
+}
+.team-section .container .team-cards {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-end;
 }
-.team li {
+.team-section .container .team-cards li {
   background-color: var(--primary-white-color);
   text-align: center;
   list-style: none;
 }
 
-.team li h3 {
+.team-section .container .team-cards li h3 {
   margin: 20px 0 10px 0;
 }
-.team li p {
+.team-section .container .team-cards li p {
   margin-bottom: 30px;
 }
 /*----------- Portfolio section -----------*/
@@ -226,41 +240,41 @@ header nav .nav-menu .page {
   text-decoration: none;
   text-transform: capitalize;
 }
+
+.portfolio .cards {
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  display: flex;
+}
+.portfolio .cards li {
+  margin-bottom: 20px;
+  width: 360px;
+}
+.portfolio .cards li a h2 {
+  color: var(--primary-black-color);
+  padding: 15px;
+}
+.portfolio .cards li a p {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  padding: 15px;
+}
+
 .portfolio .menu li button:hover,
 .portfolio .menu li button.current {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-}
-
-.portfolio .cards{
-  justify-content: space-between;
-  flex-wrap: wrap;
- 
-  display: flex;
-}
-
-.portfolio .cards li{
-  margin-bottom: 20px; 
-  width: 360px;
-}
-.portfolio .cards li a h2{
-  color: var(--primary-black-color);
-  padding: 15px;
-}
-.portfolio .cards li a p{
-  color: var(--primary-text-color);
-  font-size: 16px;
-  padding: 15px;
 }
 /*----------- footer section ----------- */
 footer {
   padding: 94px var(--container-padding);
   background-color: var(--background-black);
 }
-address ul {
+footer .container address ul {
   list-style: none;
 }
-address .contact {
+footer .container address .contact {
   display: block;
   color: var(--text-white-opacity);
   font-style: normal;
@@ -270,6 +284,6 @@ address .contact {
   text-decoration: none;
   padding: 5px 0;
 }
-address .contact:hover {
+footer .container address .contact:hover {
   color: var(--primary-white-color);
 }
