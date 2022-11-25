@@ -170,7 +170,7 @@ header .container .contacts-menu li .item:hover .icon {
   background-blend-mode: overlay;
   padding: 200px var(--container-padding);
   position: relative;
-  text-align: center; 
+  text-align: center;
 }
 .hero .hero-title {
   width: 500px;
@@ -181,11 +181,11 @@ header .container .contacts-menu li .item:hover .icon {
   position: relative;
   z-index: 5;
 }
-.hero button{
+.hero button {
   position: relative;
   z-index: 5;
 }
-.hero .overlay{
+.hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -332,6 +332,9 @@ header .container .contacts-menu li .item:hover .icon {
   text-decoration: none;
   text-transform: capitalize;
 }
+.portfolio .menu li button:hover {
+  box-shadow: rgba(82, 82, 82, 0.3) 0 3px 5px;
+}
 
 .portfolio .cards {
   justify-content: space-between;
@@ -340,8 +343,12 @@ header .container .contacts-menu li .item:hover .icon {
   display: flex;
 }
 .portfolio .cards li {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   width: 360px;
+  border: solid 1px var(--gray-1);
+}
+.portfolio .cards li:hover {
+  box-shadow: rgba(82, 82, 82, 0.3) 0 3px 5px;
 }
 .portfolio .cards li a h2 {
   color: var(--primary-black-color);
@@ -351,6 +358,10 @@ header .container .contacts-menu li .item:hover .icon {
   color: var(--primary-text-color);
   font-size: 16px;
   padding: 15px;
+}
+
+.portfolio .cards li a img {
+  width: 100%;
 }
 
 .portfolio .menu li button:hover,
@@ -382,6 +393,15 @@ header .container .contacts-menu li .item:hover .icon {
   cursor: pointer;
   height: 92px;
   width: 170px;
+}
+.customers .container ul li:hover {
+  border: solid 1px var(--accent-color);
+}
+.customers .container ul li .icon-customer {
+  fill: var(--gray-2);
+}
+.customers .container ul li:hover .icon-customer {
+  fill: var(--accent-color);
 }
 
 /*----------- footer section ----------- */
@@ -418,30 +438,29 @@ footer .container address .contact:hover {
 footer .container aside p {
   color: var(--primary-white-color);
   font-weight: 700;
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-footer .container aside ul{
+footer .container aside ul {
   display: flex;
   align-items: center;
   list-style: none;
   gap: 10px;
-  
 }
 
-footer .container aside ul li{
+footer .container aside ul li {
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: var(--primary-white-10Perc);
   border-radius: 25px;
-  box-shadow: hsla(0, 0%, 0%, 0.479) 0 3px 5px  ;
+  box-shadow: hsla(0, 0%, 0%, 0.479) 0 3px 5px;
   cursor: pointer;
   height: 44px;
   width: 44px;
 }
 
-footer .container aside ul li .icon{
+footer .container aside ul li .icon {
   fill: var(--primary-white-color);
 }
